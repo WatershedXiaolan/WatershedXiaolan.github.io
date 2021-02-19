@@ -1,0 +1,79 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>Use Custom Domain to Personal Blog with Hexo | Xiaolan's Blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 5.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Use Custom Domain to Personal Blog with Hexo</h1><a id="logo" href="/.">Xiaolan's Blog</a><p class="description">Summer night breeze 夏夜晚风</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/timeline/"><i class="fa fa-align-justify"> Timeline</i></a><a href="/Gallery/"><i class="fa fa-align-justify"> Gallery</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Use Custom Domain to Personal Blog with Hexo</h1><div class="post-meta">2021-01-29<span> | </span><span class="category"><a href="/categories/Tutorial/">Tutorial</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2021/01/29/domain/" href="/2021/01/29/domain/#disqus_thread"></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">Contents</div><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Prerequisite"><span class="toc-number">1.</span> <span class="toc-text">Prerequisite</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Buy-a-domain"><span class="toc-number">2.</span> <span class="toc-text">Buy a domain</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-custom-domain-on-GitHub-repo"><span class="toc-number">3.</span> <span class="toc-text">Deploy to custom domain (on GitHub repo)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add-subdomain-on-hosting-provider"><span class="toc-number">4.</span> <span class="toc-text">Add subdomain (on hosting provider)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redeploy"><span class="toc-number">5.</span> <span class="toc-text">Redeploy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reference"><span class="toc-number">6.</span> <span class="toc-text">Reference</span></a></li></ol></div></div><div class="post-content"><blockquote>
+<p>Today I migrated my personal blog from the default *.github.io to a custom domain. The process is not as smooth as I expected, so here I write down what I did right and wrong.</p>
+</blockquote>
+<h3 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h3><p>A personal using Hexo is already set up and being successfully deployed on <code>*.github.io</code></p>
+<h3 id="Buy-a-domain"><a href="#Buy-a-domain" class="headerlink" title="Buy a domain"></a>Buy a domain</h3><p>I researched <a target="_blank" rel="noopener" href="https://domains.google/">Google Domains</a> and <a target="_blank" rel="noopener" href="https://www.godaddy.com/">GoDaddy</a>. GoDaddy offers a lower first-year price, but for the following year it is getting pricy, while Google Domain offers a flat annual price. I bought with Google since I plan to keep my domain for a long time.</p>
+<p><img src="https://lh3.googleusercontent.com/7TZTaNXViUuGhYDGrhk5HjZW_siiiVpZ8BsSDXRx5C9Chbjl2D4lpGA5ROY1cskzPl4ncKUZAI93AXLg9wOG4U3GqRDRWjqQZluZ60OShzjnEqFxp-jUbs4stMaWKHSeij97XCpnPQ=w2400" alt="GoDaddy"><br><img src="https://lh3.googleusercontent.com/rSjEH3Grh0z5ZhRPyAvI_FPKD9SGqOJMlcxoB50CN-ft-ZoiMPO4ItXnOJirsVAF6wBVmA35BKHg09EP1x5S3x8J9VQOyPHKKeu32NUlOGlgmGkGghWu3Z4XSZ0GvQNnJ8YSatMbvg=w2400" alt="Google Domains"></p>
+<h3 id="Deploy-to-custom-domain-on-GitHub-repo"><a href="#Deploy-to-custom-domain-on-GitHub-repo" class="headerlink" title="Deploy to custom domain (on GitHub repo)"></a>Deploy to custom domain (on GitHub repo)</h3><ol>
+<li><p>Modify _config.yml file; change url to the new domain</p>
+</li>
+<li><p>Add CNAME file in source directory</p>
+<ul>
+<li><strong>Caveat</strong>: Github tutorial will ask you to first create a CNAME file under root directory, and that pull the commit to your local repo. However, doing this will cause you to lose the CNAME file in your next Hexo deployment because Hexo will DELETE the CNAME file. A workaround is to put the CNAME file in the <code>source</code> directory.</li>
+</ul>
+</li>
+</ol>
+<h3 id="Add-subdomain-on-hosting-provider"><a href="#Add-subdomain-on-hosting-provider" class="headerlink" title="Add subdomain (on hosting provider)"></a>Add subdomain (on hosting provider)</h3><ol>
+<li><p>Get your git pages’IP</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ping xxx<span class="selector-class">.github</span>.io</span><br><span class="line"><span class="comment">// change xxx to your own</span></span><br></pre></td></tr></table></figure>
+<p>The return XXX.XXX.XXX.XXX is the ip you need.</p>
+</li>
+<li><p>Configurate DNS seeting in your domain host</p>
+</li>
+</ol>
+<p><img src="https://lh3.googleusercontent.com/8eeHyv-RPn_Ba8gyJz51al3fgDnSSID4JJVpGA6o68zL3hiaBh0nupVtmIoblrC25LwQGOx4Uxd_3X4yejMjVnmdlD1AsU41g3AehR-l81T5lWLg3o1AGiXdAxGg9y7J5YddG0oylQ=w2400"></p>
+<blockquote>
+<p>Note: some tutorial will ask you to create a CNAME record instead. The main difference between the A record and CNAME record is that the A record maps a name to one or more <em>IP addresses</em> when IP are known and stable, while the CNAME record maps a name too another name. It should only be used when there are no other records on that name.</p>
+</blockquote>
+<h3 id="Redeploy"><a href="#Redeploy" class="headerlink" title="Redeploy"></a>Redeploy</h3><figure class="highlight sas"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean <span class="variable">&amp;&amp;</span> hexo g <span class="variable">&amp;&amp;</span> hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://alexzl5.github.io/use-custom-domain-with-hexo/">https://alexzl5.github.io/use-custom-domain-with-hexo/</a></li>
+<li><a target="_blank" rel="noopener" href="https://xiaoyuliu.github.io/2018/03/28/how-to-sync-hexo-blog/">https://xiaoyuliu.github.io/2018/03/28/how-to-sync-hexo-blog/</a></li>
+</ol>
+</div><div class="tags"><a href="/tags/Hexo/"><i class="fa fa-tag"></i>Hexo</a></div><div class="post-nav"><a class="pre" href="/2021/02/10/bert/">A beginner's learning notes to BERT</a><a class="next" href="/2021/01/24/git/">GIT Commands and Scenarios</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'https://watershedxiaolan.github.io/2021/01/29/domain/';
+    this.page.identifier = '2021/01/29/domain/';
+    this.page.title = 'Use Custom Domain to Personal Blog with Hexo';
+  };</script><script type="text/javascript" id="disqus-lazy-load-script">$.ajax({
+url: 'https://disqus.com/next/config.json',
+timeout: 2500,
+type: 'GET',
+success: function(){
+  var d = document;
+  var s = d.createElement('script');
+  s.src = '//watershed-1.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', + new Date());
+  (d.head || d.body).appendChild(s);
+  $('.disqus_click_btn').css('display', 'none');
+},
+error: function() {
+  $('.disqus_click_btn').css('display', 'block');
+}
+});</script><script type="text/javascript" id="disqus-click-load">$('.btn_click_load').click(() => {  //click to load comments
+    (() => { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//watershed-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    $('.disqus_click_btn').css('display','none');
+});</script><script type="text/javascript" id="disqus-count-script">$(function() {
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', '//disqus.com/next/config.json', true);
+     xhr.timeout = 2500;
+     xhr.onreadystatechange = function () {
+       if (xhr.readyState === 4 && xhr.status === 200) {
+         $('.post-meta .post-comments-count').show();
+         var s = document.createElement('script');
+         s.id = 'dsq-count-scr';
+         s.src = 'https://watershed-1.disqus.com/count.js';
+         s.async = true;
+         (document.head || document.body).appendChild(s);
+       }
+     };
+     xhr.ontimeout = function () { xhr.abort(); };
+     xhr.send(null);
+   });
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://watershedxiaolan.github.io"/></form></div><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"/><input type="hidden" name="si" value="https://watershedxiaolan.github.io"/><input name="tn" type="hidden" value="bds"/><input name="cl" type="hidden" value="3"/><input name="ct" type="hidden" value="2097152"/><input name="s" type="hidden" value="on"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Journey/">Journey</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Learning/">Learning</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">Tutorial</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/AB-test/" style="font-size: 25px;">AB_test</a> <a href="/tags/heroku-dash-plotly/" style="font-size: 15px;">heroku, dash, plotly</a> <a href="/tags/nlp/" style="font-size: 15px;">nlp</a> <a href="/tags/misc/" style="font-size: 15px;">misc</a> <a href="/tags/data/" style="font-size: 15px;">data</a> <a href="/tags/DevOps/" style="font-size: 15px;">DevOps</a> <a href="/tags/docker/" style="font-size: 15px;">docker</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Journey/" style="font-size: 15px;">Journey</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/02/10/bert/">A beginner's learning notes to BERT</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/29/domain/">Use Custom Domain to Personal Blog with Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/24/git/">GIT Commands and Scenarios</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/13/devops/">CI/CD Pipeline with DevOps</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/12/13/data-storage/">Database vs. Data warehouse vs. Data lake</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/12/12/conda-brew-pip/">Conda vs. Homebrew vs. pip</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/12/10/Deploy-Dash-App-on-Heroku/">Deploy Dash App on Heroku</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/12/06/docker/">Docker a comprehensive getting started tool</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/11/17/another-AB-testing/">Another AB testing learning with Cases (!)</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/11/10/ABtest-bit-tiger/">AB Test Learning Mind Map</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> Recent Comments</i></div><script type="text/javascript" src="//watershed-1.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="https://github.com/WatershedXiaolan" title="GitHub" target="_blank">GitHub</a><ul></ul><a href="https://www.linkedin.com/in/xiaolancarolli/" title="LinkedIn" target="_blank">LinkedIn</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2021 | <a href="/." rel="nofollow">Xiaolan's Blog | </a>Welcome! <br><!-- 不蒜子统计 --><script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv"></span>本站总访问量<span id="busuanzi_value_site_pv"></span>次<!-- 动态粒子效果 --><script type="text/javascript" color="255,23,0" opacity="0.8" zIndex="-2" count="80" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/love.js"></script><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

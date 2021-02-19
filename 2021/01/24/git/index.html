@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content=""><title>GIT Commands and Scenarios | Xiaolan's Blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 5.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">GIT Commands and Scenarios</h1><a id="logo" href="/.">Xiaolan's Blog</a><p class="description">Summer night breeze 夏夜晚风</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> Home</i></a><a href="/archives/"><i class="fa fa-archive"> Archive</i></a><a href="/about/"><i class="fa fa-user"> About</i></a><a href="/timeline/"><i class="fa fa-align-justify"> Timeline</i></a><a href="/Gallery/"><i class="fa fa-align-justify"> Gallery</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">GIT Commands and Scenarios</h1><div class="post-meta">2021-01-24<span> | </span><span class="category"><a href="/categories/Learning/">Learning</a></span></div><a class="disqus-comment-count" data-disqus-identifier="2021/01/24/git/" href="/2021/01/24/git/#disqus_thread"></a><div class="post-content"><p><img src="https://lh3.googleusercontent.com/bxBJ4m18nzrt2Nw5IOzc26fR44ej8NETXF2vR-AiiGorsbe_iWR2luZrE-TwA2vJLcnmIKS7ql52K7sNztBK0sN3FXljYoQ78ajx71YDZdNMaeQPMkYVbB0f9pl9blqgvZBdWafyfw=w2400"></p>
+<h3 id="Git-with-local-repos"><a href="#Git-with-local-repos" class="headerlink" title="Git with local repos"></a>Git with local repos</h3><ul>
+<li><code>git add</code>: Git to track our file</li>
+<li><code>git diff &lt;filename&gt;</code>: show only the unstaged changes by default. If wish to show the difference between staged and µcommitted, used <code>--stage</code>.</li>
+<li><code>git commit -a -m &lt;your msg&gt;</code>: skipping staging and go directly to commit, but this does not work on new files because they are untracked. <code>-a</code> means to add all <strong>known files</strong>.</li>
+<li><code>git log --all --oneline --decorate --graph</code> shows the log</li>
+<li><code>git show &lt;commit id&gt;</code> show details of a specific commit</li>
+<li><code>git add -p</code> p for patch. Interactively choose hunks of patch between the index and the work tree and add them to the index. This gives the user a chance to review the difference before adding modified contents to the index.</li>
+<li><code>git rm &lt;filename&gt;</code> stops a file being tracked <strong>and</strong> removing from the directory. changes are staged to be committed.</li>
+<li><code>git reset HEAD &lt;filename&gt;</code> unstages added changes</li>
+<li><code>git mv &lt;filename1&gt;  &lt;filename2&gt; </code> to rename file in the repo. This will also change the working directory.</li>
+<li><code>git merge --abort</code> discard merge</li>
+<li><code>git rebase &lt;branch name&gt;</code>: move the current branch on top of the <branch name>. This will help keep the history linear</li>
+</ul>
+<h3 id="Git-remote-command"><a href="#Git-remote-command" class="headerlink" title="Git remote command"></a>Git remote command</h3><ul>
+<li><code>git remote</code>: list remote repositories</li>
+<li><code>git remote update</code>: git remote update can update all of your branches set to track remote ones, however not merge any changes in</li>
+<li><code>git fetch</code>:  git fetch can update only the branch you are on, however not merge any changes in</li>
+<li><code>git pull</code>: can update and merge any remote changes of the present branch you are on</li>
+<li><code>git branch -r</code>: List remote branches</li>
+</ul>
+<h3 id="How-to-undo-changes"><a href="#How-to-undo-changes" class="headerlink" title="How to undo changes"></a>How to undo changes</h3><h4 id="reset-vs-checkout"><a href="#reset-vs-checkout" class="headerlink" title="reset vs checkout"></a><code>reset</code> vs <code>checkout</code></h4><ul>
+<li><code>reset</code> resets the index without touching the working tree</li>
+<li><code>checkout</code> changes the working tree without touching the index.</li>
+</ul>
+<h4 id="Several-usage-scenarios"><a href="#Several-usage-scenarios" class="headerlink" title="Several usage scenarios"></a>Several usage scenarios</h4><h5 id="git-checkout-lt-filename-gt"><a href="#git-checkout-lt-filename-gt" class="headerlink" title="git checkout &lt;filename&gt;"></a><code>git checkout &lt;filename&gt;</code></h5><ul>
+<li><input disabled="" type="checkbox"> When to use: stage –&gt; Working</li>
+<li><input disabled="" type="checkbox"> Will change working directory: yes</li>
+<li><input disabled="" type="checkbox"> How it works: checkout a file from repo so that the last changes are discarded<br>This will revert changes to modified files before they are staged.</li>
+</ul>
+<h5 id="git-checkout-head-lt-filename-gt"><a href="#git-checkout-head-lt-filename-gt" class="headerlink" title="git checkout head &lt;filename&gt;"></a><code>git checkout head &lt;filename&gt;</code></h5><ul>
+<li><input disabled="" type="checkbox"> When to use: stage –&gt; stage</li>
+<li><input disabled="" type="checkbox"> Will change working directory: Yes</li>
+<li><input disabled="" type="checkbox"> How it works: checkout a file from repo so that the last changes are discarded<br>This will revert changes to modified files before they are staged.</li>
+</ul>
+<h5 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a><code>git reset</code></h5><ul>
+<li><input disabled="" type="checkbox"> When to use: repo –&gt; stage</li>
+<li><input disabled="" type="checkbox"> Will change working directory: No</li>
+<li><input disabled="" type="checkbox"> How it works: unstage changes, reset commit</li>
+</ul>
+<h5 id="git-reset-–-hard-origin-master"><a href="#git-reset-–-hard-origin-master" class="headerlink" title="git reset –-hard origin/master"></a><code>git reset –-hard origin/master</code></h5><ul>
+<li><input disabled="" type="checkbox"> When to use: remote repo –&gt; local repo –&gt; working</li>
+<li><input disabled="" type="checkbox"> Will change working directory: Yes</li>
+<li><input disabled="" type="checkbox"> How it works: after committing to remote repo</li>
+</ul>
+<h3 id="How-to-modify-a-previous-commit"><a href="#How-to-modify-a-previous-commit" class="headerlink" title="How to modify a previous commit"></a>How to modify a previous commit</h3><h4 id="Fix-a-fixable-commit"><a href="#Fix-a-fixable-commit" class="headerlink" title="Fix a (fixable) commit"></a>Fix a (fixable) commit</h4><p><strong>Scenario</strong>: The previous commit misses either some file or the msg is not correct</p>
+<p><strong>Solution</strong>: use <code>--amend</code> along with <strong>staged</strong> changes to modify the previous commit</p>
+<p><strong>What it actually does</strong>: overwrite the previous commit</p>
+<p><strong>Heads up</strong>: avoid using it on public repos</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git <span class="keyword">add</span><span class="bash"> a.py</span></span><br><span class="line">git commit -m <span class="string">&#x27;added two files&#x27;</span> <span class="comment"># wrong commit</span></span><br><span class="line">git <span class="keyword">add</span><span class="bash"> b.py</span></span><br><span class="line">git commit --amend <span class="comment"># this will also open an editor to modify the previous commit msg.</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="revert-a-bad-commit"><a href="#revert-a-bad-commit" class="headerlink" title="revert a (bad) commit"></a>revert a (bad) commit</h4><p><strong>Scenario</strong>: roll back a bad commit</p>
+<p><strong>Solution</strong>: revert the commit</p>
+<p><strong>What it actually does</strong>: creates an inverse of the previous commit  </p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">revert</span> HEAD # <span class="built_in">revert</span> the previous head</span><br><span class="line">git <span class="built_in">revert</span> &lt;commit ID&gt; # <span class="built_in">revert</span> another commit back <span class="built_in">in</span> <span class="built_in">time</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="How-to-squash-commits-when-doing-pull-request"><a href="#How-to-squash-commits-when-doing-pull-request" class="headerlink" title="How to squash commits when doing pull request"></a>How to squash commits when doing pull request</h3><p>Use this when forking and doing pull requests back to the master.</p>
+<ol>
+<li><p>rebase to master. We can use rebase since typically only one person uses the forked repo</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i <span class="keyword">master</span> <span class="title"># I</span> for interactive</span><br></pre></td></tr></table></figure></li>
+<li><p>squash commits</p>
+<ul>
+<li>make the first commit<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b new_branch</span><br><span class="line">edit</span><br><span class="line">git <span class="builtin-name">add</span> .</span><br><span class="line">git commit -m <span class="string">&#x27;first commit&#x27;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure></li>
+<li>make the second commit<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">edit</span><br><span class="line">git <span class="keyword">add</span> .</span><br><span class="line">git <span class="keyword">commit</span> -m <span class="string">&#x27;second commit&#x27;</span></span><br><span class="line">git push  # now new_branch <span class="keyword">is</span> ahead <span class="keyword">of</span> master <span class="keyword">by</span> two <span class="keyword">commit</span></span><br></pre></td></tr></table></figure></li>
+<li>rebase and squash. If you mark one or more lines as “squash”, they will be combined with the one above<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rebase -i <span class="keyword">master</span> <span class="title">#interactively</span> squash commits</span><br><span class="line">git show <span class="comment"># show the latest commit</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="Miscellaneous"><a href="#Miscellaneous" class="headerlink" title="Miscellaneous"></a>Miscellaneous</h3><h4 id="cherry-pick"><a href="#cherry-pick" class="headerlink" title="cherry-pick"></a>cherry-pick</h4><ul>
+<li><input disabled="" type="checkbox"> use when selecting commits from other branches into main branch</li>
+<li><input disabled="" type="checkbox"> <code>git cherry-pick &lt;commitID1&gt; &lt;commitID2&gt;</code></li>
+</ul>
+<h4 id="modify-old-commits"><a href="#modify-old-commits" class="headerlink" title="modify old commits"></a>modify old commits</h4><ul>
+<li><input disabled="" type="checkbox"> use <code>git rebase -i</code> to reorder the commit I want to change to be on top</li>
+<li><input disabled="" type="checkbox"> use <code>git commit --amend</code> to modify the commit</li>
+<li><input disabled="" type="checkbox"> use <code>git rebase -i</code> again to change the order back</li>
+</ul>
+<h4 id="tag"><a href="#tag" class="headerlink" title="tag"></a>tag</h4><ul>
+<li><input disabled="" type="checkbox"> use when I want some anchor more permanent than a branch or commit</li>
+<li><input disabled="" type="checkbox"> <code>git tag &lt;versionid&gt; &lt;commitID&gt;</code></li>
+<li><input disabled="" type="checkbox"> use <code>git describe &lt;a reference&gt;</code> to describe where you are relative to the closest “anchor”. The reference could be a branch<h4 id="relative-referencing"><a href="#relative-referencing" class="headerlink" title="relative referencing"></a>relative referencing</h4></li>
+<li>Moving upwards one commit at a time with <code>^</code><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">git</span> <span class="string">checkout main^</span></span><br><span class="line"><span class="attr">git</span> <span class="string">checkout main^^</span></span><br></pre></td></tr></table></figure></li>
+<li>Moving upwards a number of times with <code>~&lt;num&gt;</code><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -f main HEAD~<span class="number">3</span> # reset main <span class="number">3</span> commits upwards</span><br></pre></td></tr></table></figure>
+<img width="920" alt="Screen Shot 2021-01-07 at 5 49 42 PM" src="https://user-images.githubusercontent.com/5552371/103957620-bbfa4600-5110-11eb-9b55-c85751756ecd.png">
+
+
+</li>
+</ul>
+<p>Reference:</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://bugfender.com/blog/robust-development-with-git-flow-bitbucket-pipelines-and-bitrise/">https://bugfender.com/blog/robust-development-with-git-flow-bitbucket-pipelines-and-bitrise/</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.coursera.org/learn/introduction-git-github">https://www.coursera.org/learn/introduction-git-github</a></li>
+</ol>
+</div><div class="tags"><a href="/tags/Git/"><i class="fa fa-tag"></i>Git</a></div><div class="post-nav"><a class="pre" href="/2021/01/29/domain/">Use Custom Domain to Personal Blog with Hexo</a><a class="next" href="/2021/01/13/devops/">CI/CD Pipeline with DevOps</a></div><div id="disqus_thread"><div class="btn_click_load"><button class="disqus_click_btn">阅读评论（请确保 Disqus 可以正常加载）</button></div><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'https://watershedxiaolan.github.io/2021/01/24/git/';
+    this.page.identifier = '2021/01/24/git/';
+    this.page.title = 'GIT Commands and Scenarios';
+  };</script><script type="text/javascript" id="disqus-lazy-load-script">$.ajax({
+url: 'https://disqus.com/next/config.json',
+timeout: 2500,
+type: 'GET',
+success: function(){
+  var d = document;
+  var s = d.createElement('script');
+  s.src = '//watershed-1.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', + new Date());
+  (d.head || d.body).appendChild(s);
+  $('.disqus_click_btn').css('display', 'none');
+},
+error: function() {
+  $('.disqus_click_btn').css('display', 'block');
+}
+});</script><script type="text/javascript" id="disqus-click-load">$('.btn_click_load').click(() => {  //click to load comments
+    (() => { // DON'T EDIT BELOW THIS LINE
+        var d = document;
+        var s = d.createElement('script');
+        s.src = '//watershed-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', + new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    $('.disqus_click_btn').css('display','none');
+});</script><script type="text/javascript" id="disqus-count-script">$(function() {
+     var xhr = new XMLHttpRequest();
+     xhr.open('GET', '//disqus.com/next/config.json', true);
+     xhr.timeout = 2500;
+     xhr.onreadystatechange = function () {
+       if (xhr.readyState === 4 && xhr.status === 200) {
+         $('.post-meta .post-comments-count').show();
+         var s = document.createElement('script');
+         s.id = 'dsq-count-scr';
+         s.src = 'https://watershed-1.disqus.com/count.js';
+         s.async = true;
+         (document.head || document.body).appendChild(s);
+       }
+     };
+     xhr.ontimeout = function () { xhr.abort(); };
+     xhr.send(null);
+   });
+</script></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="https://watershedxiaolan.github.io"/></form></div><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"/><input type="hidden" name="si" value="https://watershedxiaolan.github.io"/><input name="tn" type="hidden" value="bds"/><input name="cl" type="hidden" value="3"/><input name="ct" type="hidden" value="2097152"/><input name="s" type="hidden" value="on"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Categories</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Journey/">Journey</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Learning/">Learning</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">Tutorial</a><span class="category-list-count">1</span></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/AB-test/" style="font-size: 25px;">AB_test</a> <a href="/tags/heroku-dash-plotly/" style="font-size: 15px;">heroku, dash, plotly</a> <a href="/tags/nlp/" style="font-size: 15px;">nlp</a> <a href="/tags/misc/" style="font-size: 15px;">misc</a> <a href="/tags/data/" style="font-size: 15px;">data</a> <a href="/tags/DevOps/" style="font-size: 15px;">DevOps</a> <a href="/tags/docker/" style="font-size: 15px;">docker</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Journey/" style="font-size: 15px;">Journey</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Recent</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2021/02/10/bert/">A beginner's learning notes to BERT</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/29/domain/">Use Custom Domain to Personal Blog with Hexo</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/24/git/">GIT Commands and Scenarios</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/13/devops/">CI/CD Pipeline with DevOps</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/12/13/data-storage/">Database vs. Data warehouse vs. Data lake</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/12/12/conda-brew-pip/">Conda vs. Homebrew vs. pip</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/12/10/Deploy-Dash-App-on-Heroku/">Deploy Dash App on Heroku</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/12/06/docker/">Docker a comprehensive getting started tool</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/11/17/another-AB-testing/">Another AB testing learning with Cases (!)</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/11/10/ABtest-bit-tiger/">AB Test Learning Mind Map</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-comment-o"> Recent Comments</i></div><script type="text/javascript" src="//watershed-1.disqus.com/recent_comments_widget.js?num_items=5&amp;hide_avatars=1&amp;avatar_size=32&amp;excerpt_length=20&amp;hide_mods=1"></script></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Links</i></div><ul></ul><a href="https://github.com/WatershedXiaolan" title="GitHub" target="_blank">GitHub</a><ul></ul><a href="https://www.linkedin.com/in/xiaolancarolli/" title="LinkedIn" target="_blank">LinkedIn</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2021 | <a href="/." rel="nofollow">Xiaolan's Blog | </a>Welcome! <br><!-- 不蒜子统计 --><script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv"></span>本站总访问量<span id="busuanzi_value_site_pv"></span>次<!-- 动态粒子效果 --><script type="text/javascript" color="255,23,0" opacity="0.8" zIndex="-2" count="80" src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js"></script></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/love.js"></script><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
