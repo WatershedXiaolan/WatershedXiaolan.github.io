@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://watershedxiaolan.github.io/2021/02/21/sql-nosql/</loc>
+    
+    <lastmod>2021-02-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://watershedxiaolan.github.io/2021/02/10/bert/</loc>
     
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     
   </url>
   
@@ -116,7 +123,7 @@
 
   <url>
     <loc>https://watershedxiaolan.github.io/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -124,70 +131,70 @@
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/AB-test/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/heroku-dash-plotly/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/nlp/</loc>
-    <lastmod>2021-02-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://watershedxiaolan.github.io/tags/misc/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/data/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://watershedxiaolan.github.io/tags/misc/</loc>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/DevOps/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/docker/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/Hexo/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/Git/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/Journey/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -196,21 +203,21 @@
   
   <url>
     <loc>https://watershedxiaolan.github.io/categories/Learning/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/categories/Tutorial/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/categories/Journey/</loc>
-    <lastmod>2021-02-19</lastmod>
+    <lastmod>2021-02-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
