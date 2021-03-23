@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://watershedxiaolan.github.io/2021/03/16/databricks/</loc>
+    
+    <lastmod>2021-03-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://watershedxiaolan.github.io/2021/02/22/fintech/</loc>
     
     <lastmod>2021-03-15</lastmod>
@@ -130,85 +137,92 @@
 
   <url>
     <loc>https://watershedxiaolan.github.io/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://watershedxiaolan.github.io/tags/heroku-dash-plotly/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <loc>https://watershedxiaolan.github.io/tags/AB-test/</loc>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://watershedxiaolan.github.io/tags/AB-test/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <loc>https://watershedxiaolan.github.io/tags/heroku-dash-plotly/</loc>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/nlp/</loc>
-    <lastmod>2021-03-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://watershedxiaolan.github.io/tags/misc/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/data/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <lastmod>2021-03-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://watershedxiaolan.github.io/tags/Databricks/</loc>
+    <lastmod>2021-03-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://watershedxiaolan.github.io/tags/misc/</loc>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/docker/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/DevOps/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/Hexo/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/FinTech/</loc>
-    <lastmod>2021-03-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://watershedxiaolan.github.io/tags/Journey/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/Git/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <lastmod>2021-03-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://watershedxiaolan.github.io/tags/Journey/</loc>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -217,21 +231,21 @@
   
   <url>
     <loc>https://watershedxiaolan.github.io/categories/Learning/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/categories/Tutorial/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/categories/Journey/</loc>
-    <lastmod>2021-03-15</lastmod>
+    <lastmod>2021-03-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
