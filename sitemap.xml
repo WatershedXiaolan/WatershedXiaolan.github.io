@@ -95,7 +95,7 @@
 
   <url>
     <loc>https://watershedxiaolan.github.io/</loc>
-    <lastmod>2021-04-22</lastmod>
+    <lastmod>2021-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -103,56 +103,56 @@
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/Heroku-Dash-Plotly/</loc>
-    <lastmod>2021-04-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://watershedxiaolan.github.io/tags/Docker/</loc>
-    <lastmod>2021-04-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://watershedxiaolan.github.io/tags/Flask-Docker-Heroku/</loc>
-    <lastmod>2021-04-22</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://watershedxiaolan.github.io/tags/Data/</loc>
-    <lastmod>2021-04-22</lastmod>
+    <lastmod>2021-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/NLP/</loc>
-    <lastmod>2021-04-22</lastmod>
+    <lastmod>2021-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://watershedxiaolan.github.io/tags/Hexo/</loc>
-    <lastmod>2021-04-22</lastmod>
+    <loc>https://watershedxiaolan.github.io/tags/Data/</loc>
+    <lastmod>2021-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://watershedxiaolan.github.io/tags/Docker/</loc>
+    <lastmod>2021-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/FinTech/</loc>
-    <lastmod>2021-04-22</lastmod>
+    <lastmod>2021-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://watershedxiaolan.github.io/tags/Flask-Docker-Heroku/</loc>
+    <lastmod>2021-06-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://watershedxiaolan.github.io/tags/Hexo/</loc>
+    <lastmod>2021-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/tags/Git/</loc>
-    <lastmod>2021-04-22</lastmod>
+    <lastmod>2021-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -161,14 +161,14 @@
   
   <url>
     <loc>https://watershedxiaolan.github.io/categories/Learning/</loc>
-    <lastmod>2021-04-22</lastmod>
+    <lastmod>2021-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://watershedxiaolan.github.io/categories/Tutorial/</loc>
-    <lastmod>2021-04-22</lastmod>
+    <lastmod>2021-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
